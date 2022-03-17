@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import action
 
 # Permissions
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny,IsAuthenticated
 
 # Serializers
 from .serializers import UserAuthSerializer,UserModelSerializer
@@ -15,17 +15,26 @@ from .serializers import UserAuthSerializer,UserModelSerializer
 # Models
 from users.models import User
 
+from users import serializers
+
 
 class UserViewSet(viewsets.GenericViewSet):
     """User view set.
     Handle auth and user information
     """
     queryset = User.objects.all()
-    permissions =[AllowAny]
 
     def get_serializer_class(self):
         if self.action == "auth":
             return UserAuthSerializer
+    
+    def get_permissions(self):
+        """Assign permissions based on action"""
+        if self.action == 'auth':
+            permissions =[AllowAny()]
+        else:
+            permissions =[IsAuthenticated()]
+        return permissions
     
     @action(detail=False,methods=['post'])
     def auth(self,request):
@@ -45,4 +54,10 @@ class UserViewSet(viewsets.GenericViewSet):
             'user_name':UserModelSerializer(user).data["first_name"]
         }
         return Response(data,status = status.HTTP_200_OK)
+
+    @action(detail=False,methods=['get'])
+    def user(self,request):
+        """Users Information"""
+        response = UserModelSerializer(self.queryset,many = True).data
+        return Response(response,status = status.HTTP_200_OK)
 
