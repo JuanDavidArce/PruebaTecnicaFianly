@@ -15,7 +15,6 @@ from .serializers import UserAuthSerializer,UserModelSerializer
 # Models
 from users.models import User
 
-from users import serializers
 
 
 class UserViewSet(viewsets.GenericViewSet):
@@ -25,6 +24,7 @@ class UserViewSet(viewsets.GenericViewSet):
     queryset = User.objects.all()
 
     def get_serializer_class(self):
+        """Return serializer based on action."""
         if self.action == "auth":
             return UserAuthSerializer
     
