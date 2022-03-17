@@ -21,14 +21,22 @@ services:
 
     depends_on:
       - db
+    
     command: /bin/sh -c "python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"
-
+    
 
   db:
     build:
       context: .
       dockerfile: ./DockerFiles/Postgres/Dockerfile
+
     image: db
+
+    env_file:
+      - ./.envs/.postgres
+
+    volumes:
+      - './postgres_data:/var/lib/postgresql/data'
 
     restart: always
   
