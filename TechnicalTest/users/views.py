@@ -23,6 +23,9 @@ class UserViewSet(viewsets.GenericViewSet):
     queryset = User.objects.all()
     permissions =[AllowAny]
 
+    def get_serializer_class(self):
+        if self.action == "auth":
+            return UserAuthSerializer
     
     @action(detail=False,methods=['post'])
     def auth(self,request):
