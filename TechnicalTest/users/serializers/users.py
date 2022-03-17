@@ -28,8 +28,8 @@ class UserAuthSerializer(serializers.Serializer):
     """User Auth serializer.
     Handle the authentication request data"""
 
-    user = serializers.EmailField(default="")
-    password = serializers.CharField(default="")
+    user = serializers.CharField(default="",allow_blank=True)
+    password = serializers.CharField(default="",allow_blank=True)
 
     def validate(self, data):
         """Check credentials and structure of request"""
