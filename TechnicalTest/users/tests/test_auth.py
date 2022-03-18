@@ -42,6 +42,18 @@ class AuthAPITestCase(APITestCase):
         data = {'password':'prueba123','user':'juandavid.arce@utp.edu.co'}
         request = self.client.post(self.url,data=data)
         self.assertEqual(request.status_code, status.HTTP_200_OK)
+
+    def test_response_bad_request(self):
+        """Verify request succeed."""
+        data = {'user':'juandavid.arce@utp.edu.co'}
+        request = self.client.post(self.url,data=data)
+        self.assertEqual(request.status_code, status.HTTP_400_BAD_REQUEST)
+
+    def test_response_invalid_credentials(self):
+        """Verify request succeed."""
+        data = {'password':'prueba1234','user':'juandavid.arce@utp.edu.co'}
+        request = self.client.post(self.url,data=data)
+        self.assertEqual(request.status_code, status.HTTP_401_UNAUTHORIZED)
         
 
     
