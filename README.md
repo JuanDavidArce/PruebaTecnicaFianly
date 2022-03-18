@@ -59,6 +59,7 @@ Si el token es valido la respuesta esperada es:
 
 ### Pre-requisitos 📋
 
+NOTA: Si no deseamos realizar instalación local, revisar primero la sección Despliege
 _Para ejecutar el proyecto debemos tener instalado en nuestro equipo el siguiente software:_
 
 ```
@@ -186,7 +187,13 @@ User:
 
 ## Despliegue 📦
 
-_Agregar notas adicionales sobre como hacer deploy_
+_Para hacer deploy es bastante fácil gracias a las facilidades de Docker, para ello solo necesitamos instalar Docker y Docker Compose en nuestro servidor, posterior a esto ejecutar los mismos comandos mencionados en instalación y ejecución, habilitar el puerto en el servidor para que sea accesible, y con esto ya tendríamos nuestra aplicación desplegada._
+_para nuestro caso tenemos la aplicación desplegada en aws, y podemos hacerle peticiones a las siguientes direcciones:_
+
+```
+http://3.144.226.58:8000/auth/
+http://3.144.226.58:8000/user/
+```
 
 ## Construido con 🛠️
 
