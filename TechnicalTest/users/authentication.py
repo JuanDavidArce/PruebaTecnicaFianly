@@ -1,4 +1,3 @@
-from tokenize import Token
 from rest_framework import authentication,exceptions
 
 class BearerAuthentication(authentication.TokenAuthentication):
