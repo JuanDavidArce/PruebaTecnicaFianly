@@ -134,7 +134,7 @@ _Una vez construido nuestro entorno vamos a proceder a ejecutarlo con el siguien
 ```
 
 _Con el paso anterior ya deberíamos tener nuestro entorno listo para hacer pruebas y verificar el funcionamiento del proyecto_
-_El proyecto cuenta con los siguientes datos para que hagamos pruebas mediante las peticiones explicadas en la estructura del proyecto:_
+_El proyecto cuenta con los siguientes datos para que hagamos pruebas mediante las peticiones explicadas en la estructura del proyecto, estas peticiones las hacemos a la direccion localhost:8000/endpoint/ :_
 
 ```
 
