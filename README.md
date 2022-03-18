@@ -16,16 +16,21 @@ El proyecto consiste de 2 endpoints:
 #### /auth/:
 
 Este endpoint nos permite hacer autenticación, haciendo uso de un user_id, el cual vamos a asumir será un email, y de una contraseña. La estructura de la petición (POST) es la siguiente:
+
 { 
+
      "user":"example@gmail.com",
      "password":"example123"
+     
 }
 
 Si las credenciales son correctas la respuesta esperada es:
 
 {
+
     "token": "fas4df54ds5fsad5fs4d5f4a5f4ds5f45sa4f5sd",
     "user_name": "example"
+    
 }
 
 #### /user/:
