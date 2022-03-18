@@ -47,6 +47,8 @@ Docker Compose:
 ```
 
 ### Instalación y ejecución del proyecto🔧
+IMPORTANTE: Debemos abrir la aplicacion de docker en Windows y Mac, una vez hecho esto podemos proseguir con el proceso.
+al abrir la aplicacion en windows se podria presentar el error "Hardware assisted virtualization and data execution protection must be enabled in the BIOS", para solucionarlo, basta con abrir una terminal como administrador y correr el comando "bcdedit /set hypervisorlaunchtype auto", reiniciar el pc abrir la aplicacion y continuar con el proceso.
 
 _A continuación se describen los pasos necesarios para tener el proyecto corriendo en nuestro equipo:_
 
