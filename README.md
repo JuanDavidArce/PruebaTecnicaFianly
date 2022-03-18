@@ -41,7 +41,7 @@ Si las credenciales son correctas la respuesta esperada es:
 ```
 #### /user/:
 
-Este endpoint nos permite acceder a los nombres y apellidos de las personas registradas, para hacer uso de ella, realizamos una peticion(GET) y en los Headers vamos a agreagar la key "Authentication"  con el valor "Bearer exampletoken"
+Este endpoint nos permite acceder a los nombres y apellidos de las personas registradas, para hacer uso de ella, realizamos una peticion(GET) y en los Headers vamos a agreagar la key "Authorization"  con el valor "Bearer exampletoken", para mayor comprension se recomienda ver la imagen de ejemplo de una peticion mediante postman un poco mas abajo.
 
 Si el token es valido la respuesta esperada es:
 ```
