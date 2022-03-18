@@ -62,7 +62,7 @@ Se recomienda ampliamente hacer las peticiones mediante Postman:
 Asi luce una peticion a /auth/ desde postman:
 
 
-![auth endpoint postman](https://ibb.co/TB77MQd)
+![auth endpoint postman](https://i.ibb.co/gyWtBNT/image.png)
 
 Asi luce una peticion a /user/ desde postman:
 
