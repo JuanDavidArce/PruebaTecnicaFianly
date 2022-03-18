@@ -57,9 +57,22 @@ Si el token es valido la respuesta esperada es:
 ```
 
 
+Se recomienda ampliamente hacer las peticiones mediante Postman:
+
+Asi luce una peticion a /auth/ desde postman:
+
+
+![auth endpoint postman](https://ibb.co/TB77MQd)
+
+Asi luce una peticion a /user/ desde postman:
+
+![user endpoint postman](https://ibb.co/bPwcxtZ)
+
+
 ### Pre-requisitos 📋
 
 NOTA: Si no deseamos realizar instalación local, revisar primero la sección Despliege
+
 _Para ejecutar el proyecto debemos tener instalado en nuestro equipo el siguiente software:_
 
 ```
