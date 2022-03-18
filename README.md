@@ -117,7 +117,7 @@ _Para iniciar debemos de descargar el proyecto. Si tenemos git podemos descargar
 
 ```
 -Ubuntu,Windows y Mac:
-	* git clone git@github.com:JuanDavidArce/PruebaTecnicaFianly.git
+	* git clone https://github.com/JuanDavidArce/PruebaTecnicaFianly.git
 ```
 
 _Si no tenemos git instalado, podemos descargar el archivo comprimido desde la siguiente página:
