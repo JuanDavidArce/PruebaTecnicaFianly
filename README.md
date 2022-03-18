@@ -43,13 +43,17 @@ Si las credenciales son correctas la respuesta esperada es:
 
 Este endpoint nos permite acceder a los nombres y apellidos de las personas registradas, para hacer uso de ella, realizamos una peticion(GET) y en los Headers vamos a agreagar la key "Authentication"  con el valor "Bearer expletokenldksfjlsaf656.
 Si el token es valido la respuesta esperada es:
+```
 [
+
     {
         "first_name": "Example",
         "last_name": "Example"
     }
+    
 
 ]
+```
 
 
 ### Pre-requisitos 📋
