@@ -9,6 +9,37 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 Mira **Deployment** para conocer como desplegar el proyecto.
 
+## Estructura del proyecto
+
+El proyecto consiste de 2 endpoints:
+
+#### /auth/:
+
+Este endpoint nos permite hacer autenticación, haciendo uso de un user_id, el cual vamos a asumir será un email, y de una contraseña. La estructura de la petición (POST) es la siguiente:
+{ 
+     "user":"example@gmail.com",
+     "password":"example123"
+}
+
+Si las credenciales son correctas la respuesta esperada es:
+
+{
+    "token": "fas4df54ds5fsad5fs4d5f4a5f4ds5f45sa4f5sd",
+    "user_name": "example"
+}
+
+#### /user/:
+
+Este endpoint nos permite acceder a los nombres y apellidos de las personas registradas, para hacer uso de ella, realizamos una peticion(GET) y en los Headers vamos a agreagar la key "Authentication"  con el valor "Bearer expletokenldksfjlsaf656.
+Si el token es valido la respuesta esperada es:
+[
+    {
+        "first_name": "Example",
+        "last_name": "Example"
+    }
+
+]
+
 
 ### Pre-requisitos 📋
 
