@@ -17,6 +17,7 @@ El proyecto consiste de 2 endpoints:
 
 Este endpoint nos permite hacer autenticación, haciendo uso de un user_id, el cual vamos a asumir será un email, y de una contraseña. La estructura de la petición (POST) es la siguiente:
 
+```
 { 
 
      "user":"example@gmail.com",
@@ -24,7 +25,11 @@ Este endpoint nos permite hacer autenticación, haciendo uso de un user_id, el c
      
 }
 
+```
+
 Si las credenciales son correctas la respuesta esperada es:
+
+```
 
 {
 
@@ -33,6 +38,7 @@ Si las credenciales son correctas la respuesta esperada es:
     
 }
 
+```
 #### /user/:
 
 Este endpoint nos permite acceder a los nombres y apellidos de las personas registradas, para hacer uso de ella, realizamos una peticion(GET) y en los Headers vamos a agreagar la key "Authentication"  con el valor "Bearer expletokenldksfjlsaf656.
