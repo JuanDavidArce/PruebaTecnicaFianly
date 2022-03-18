@@ -1,4 +1,5 @@
-"""Auth tests."""
+"""user tests."""
+
 # Django REST Framework
 from rest_framework import status
 from rest_framework.test import APITestCase
@@ -10,7 +11,7 @@ from rest_framework.authtoken.models import Token
 
 
 
-class AuthAPITestCase(APITestCase):
+class UserAPITestCase(APITestCase):
     """Auth API test case."""
 
     def setUp(self):
@@ -29,26 +30,21 @@ class AuthAPITestCase(APITestCase):
         self.client.credentials(HTTP_AUTHORIZATION='Bearer {}'.format(self.token))
 
         # URL
-        self.url = '/auth/'
+        self.url = '/user/'
         
 
     def test_response_success(self):
         """Verify request succeed."""
-        data = {'password':'prueba123','user':'juandavid.arce@utp.edu.co'}
-        request = self.client.post(self.url,data=data)
+        request = self.client.get(self.url)
         self.assertEqual(request.status_code, status.HTTP_200_OK)
-
-    def test_response_bad_request(self):
-        """Verify response with status code 400 bad request."""
-        data = {'user':'juandavid.arce@utp.edu.co'}
-        request = self.client.post(self.url,data=data)
-        self.assertEqual(request.status_code, status.HTTP_400_BAD_REQUEST)
-
-    def test_response_invalid_credentials(self):
-        """Verify response with status code 401 bad UNAUTHORIZED."""
-        data = {'password':'prueba12346','user':'juandavid.arce@utp.edu.co'}
-        request = self.client.post(self.url,data=data)
+    
+    def test_response_invalid_token(self):
+        """Verify if the client send an invalid token."""
+        self.client.credentials(HTTP_AUTHORIZATION='Bearer {}'.format(self.token+"d"))
+        request = self.client.get(self.url)
         self.assertEqual(request.status_code, status.HTTP_401_UNAUTHORIZED)
+
+    
         
 
     
