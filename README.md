@@ -66,7 +66,7 @@ Asi luce una peticion a /auth/ desde postman:
 
 Asi luce una peticion a /user/ desde postman:
 
-![user endpoint postman](https://ibb.co/bPwcxtZ)
+![user endpoint postman](https://i.ibb.co/wwsX3CV/image.png)
 
 
 ### Pre-requisitos 📋
