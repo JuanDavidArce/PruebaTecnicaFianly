@@ -2,7 +2,7 @@
 
 
 # Django REST Framework
-from rest_framework import viewsets,status
+from rest_framework import viewsets,status,exceptions
 from rest_framework.response import Response
 from rest_framework.decorators import action
 
@@ -39,7 +39,12 @@ class UserViewSet(viewsets.GenericViewSet):
     @action(detail=False,methods=['post'])
     def auth(self,request):
         """User Auth"""
-        serializer = UserAuthSerializer(data = request.data)
+        try:
+            serializer = UserAuthSerializer(data = request.data)
+        except exceptions.ParseError:
+            error_response = {"error_message":"Petición inválida"}
+            return Response(error_response,status=status.HTTP_400_BAD_REQUEST)
+        
         if serializer.is_valid():
             user,token = serializer.save()
         else:
