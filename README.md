@@ -7,7 +7,7 @@ _Este aplicativo permite la autenticación de un usuario mediante su identificad
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-Mira **Deployment** para conocer como desplegar el proyecto.
+Mira **Despliegue** para conocer como desplegar el proyecto.
 
 ## Estructura del proyecto
 
