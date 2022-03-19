@@ -208,6 +208,14 @@ http://3.144.226.58:8000/auth/
 http://3.144.226.58:8000/user/
 ```
 
+## Notas
+
+
+_Debemos de mencionar algunas decisiones importantes que se tomaron en el proyecto, una de ellas fue la de editar el modelo base de usuario para que la autenticación sea mediante un email.
+Otro aspecto relevante a mencionar es la razón de uso de Docker, básicamente se tomó esta decisión dado que Docker nos permite tener un ambiente aislado, el cual va a ser el mismo en cualquier máquina, esto nos garantiza que no tengamos problemas de compatibilidad, por otro lado, Docker hace que el despliegue del proyecto sea mucho más sencillo.
+Finalmente, cabe resaltar que la API navegable que nos provee Django Rest Framework está deshabilitada por temas de seguridad._
+
+
 ## Construido con 🛠️
 
 
