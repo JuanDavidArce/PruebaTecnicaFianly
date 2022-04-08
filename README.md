@@ -1,5 +1,5 @@
 
-# Prueba técnica Fianly
+# API de auntenticacion de usuarios
 
 _Este aplicativo permite la autenticación de un usuario mediante su identificador(email) y contraseña, este proceso de autenticación retorna un token con el cual podrá acceder a la información de los usuarios registrados en el sitio._
 
